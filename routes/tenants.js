@@ -2,6 +2,7 @@
 
 var express = require('express');
 var router = express.Router();
+var mongoose = require('mongoose');
 
 var Tenant = require('../models/tenant');
 var Apartment = require('../models/apartment');
@@ -11,6 +12,14 @@ var Apartment = require('../models/apartment');
 router.get('/', function(req, res) {
   Tenant.find({}, function(err, tenants) {
     res.status(err ? 400 : 200).send(err || tenants);
+  });
+});
+
+router.get('/:tenantId', function(req, res) {
+  Tenant._id = req.params.tenantId;
+  console.log(Tenant._id);
+  Tenant.findById(Tenant._id, function(err, tenant) {
+    res.status(err ? 400 : 200).send(err || tenant);
   });
 });
 
@@ -35,12 +44,12 @@ router.get('/', function(req, res) {
 //   });
 // });
 
-router.get('/', function(req, res) {
-  Tenant.findOne({}), function(err, tenant) {
-    console.log(tenant);
-    res.status(err ? 400 : 200).send(err || tenant);
-  };
-});
+// router.get('/', function(req, res) {
+//   Tenant.findOne({}), function(err, tenant) {
+//     console.log(tenant);
+//     res.status(err ? 400 : 200).send(err || tenant);
+//   };
+// });
 
 //remove a tenant
 //add a tenant - update apartment
@@ -70,6 +79,11 @@ router.get('/', function(req, res) {
 router.post('/', function(req, res) {
   Tenant.create(req.body, function(err, tenant) {
     // console.log(req.body);
+    tenant.name.first = req.body.name.first;
+    tenant.name.last = req.body.name.last;
+    tenant.save();
+    // console.log('first name:', req.body.name.first);
+    // console.log('last name:', req.body.name.last);
     res.status(err ? 400 : 200).send(err || tenant);
   });
 });
