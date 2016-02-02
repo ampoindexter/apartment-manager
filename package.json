@@ -7,7 +7,8 @@
   },
   "scripts": {
     "setup": "npm i && bower i",
-    "start": "node app.js"
+    "start": "node app.js",
+    "postinstall": "bower i"
   },
   "repository": {
     "type": "git",
