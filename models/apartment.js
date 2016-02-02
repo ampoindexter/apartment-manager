@@ -5,11 +5,11 @@ var mongoose = require('mongoose');
 var Apartment;
 
 var apartmentSchema = new mongoose.Schema({
-  imageUrl: { type: String },
-  totalRooms: { type: Number },
-  // occupiedRooms: { type: Number },
-  rent: { type: Number },
-  tenants: [{ type: mongoose.Schema.Types.ObjectId, ref: "Tenant" }]
+  name: String,
+  rent: Number,
+  totalRooms: Number,
+  tenants: [{ type: mongoose.Schema.Types.ObjectId, ref: "Tenant" }],
+  imageUrl: String
 });
 
 Apartment = mongoose.model('Apartment', apartmentSchema);

@@ -12,17 +12,17 @@ var Apartment = require('../models/apartment');
 //   res.render('apartments', { title: 'Property Manager'});
 // });
 
-/* GET apartments listing. */
-router.get('/', function(req, res) {
-  Apartment.find({}, function(err, apartments) {
-    res.status(err ? 400 : 200).send(err || apartments);
-  });
-});
+// /* GET apartments listing. */
+// router.get('/', function(req, res) {
+//   Apartment.find({}, function(err, apartments) {
+//     res.status(err ? 400 : 200).send(err || apartments);
+//   });
+// });
 
 router.get('/', function(req, res) {
   Apartment.find(function(err, apartment){
     if(err) return res.status(400).send(err);
-    res.render('apartment', {title: 'Property Manager', arr: apartment || [] });
+    res.render('apartments', {title: 'Property Manager', arr: apartment || [] });
   });
 });
 

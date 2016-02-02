@@ -2,32 +2,36 @@ extends layout
 
 block content
 
-  .container-fluid
-    .page-header
-      h1= title
-        small.words      rent now
-      
-    #list.container
-      h2 Apartment 
-      #total
-      .table-reponsive
-        table.table
+  .container
+    - var properties = ['unit number', 'rent', 'total rooms', 'tenants', 'image']
+    .row
+      .col-xs-12
+        h1= title
+    //- .row
+    //-   .col-xs-12
+    //-     each prop in properties
+    //-       label #{prop.toUpperCase()}:
+    //-       input(id = prop)
+    //-     button.btn#submit Add
+    .row
+      .col-xs-12
+        table.table.table-hover.table-striped
           thead
             tr
-              th#titleU Unit Name
-              th#titleT Tenant List
-              th#titleRent Total Rooms
-              th#titleRoom Rent per Room
-              th#titleI Total Income From Apartment
-              th#titleA Availability
-              th#titleImg Look At It
-          
-          tbody#aptTable
+              each prop in properties
+                th= prop.toUpperCase()
+          tbody#aptList
             each apartment in arr
               tr(data.id= apartment._id)
-                td= apartment.imageUrl
-                td= apartment.totalRooms
+                td= apartment.name
                 td= apartment.rent
+                td= apartment.totalRooms
                 td= apartment.tenants
+                td= apartment.imageUrl
+                td.edit.text-center
+                  i.fa.fa-pencil-square-o.fa-lg
+                td.delete.text-center
+                  i.fa.fa-trash-o.fa-lg
+
 block scripts  
   script(src='/js/apartments.js')
