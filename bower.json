@@ -3,7 +3,8 @@
   "description": "Track occupants, vacancies and monthly rent as a property manager",
   "main": "",
   "authors": [
-    "Alicia Poindexter <alcampbel@gmail.com>"
+    "Alicia Poindexter <alcampbel@gmail.com>",
+    "Tiffine Koch <tiffine.koch@gmail.com>"
   ],
   "license": "ISC",
   "homepage": "https://github.com/ampoindexter/apartment-manager",
