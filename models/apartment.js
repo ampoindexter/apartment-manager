@@ -6,8 +6,8 @@ var Apartment;
 
 var apartmentSchema = new mongoose.Schema({
   imageUrl: { type: String },
-  occupiedRooms: { type: Number },
-  rooms: { type: Number },
+  totalRooms: { type: Number },
+  // occupiedRooms: { type: Number },
   rent: { type: Number },
   tenants: [{ type: mongoose.Schema.Types.ObjectId, ref: "Tenant" }]
 });

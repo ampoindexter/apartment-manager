@@ -42,6 +42,15 @@ router.get('/', function(req, res) {
   };
 });
 
+//remove a tenant
+//add a tenant - update apartment
+
+//qualifiers 
+//tenant doesn't exist on other list
+//totalRooms vs. tenants.length
+
+//*remove occupied rooms from database
+
 // //found one apartment and one tenant
 // apartment // find in a separate findOne
 // tenant // find in a separate findOne

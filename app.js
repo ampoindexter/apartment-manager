@@ -26,6 +26,7 @@ app.use(express.static('public'));
 
 app.use('/', require('./routes/index'));
 app.use('/tenants', require('./routes/tenants'));
+app.use('/apartments', require('./routes/apartments'));
 
 // 404 handler
 app.get(function(req, res) {

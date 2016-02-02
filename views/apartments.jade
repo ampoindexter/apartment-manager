@@ -1,0 +1,33 @@
+extends layout
+
+block content
+
+  .container-fluid
+    .page-header
+      h1= title
+        small.words      rent now
+      
+    #list.container
+      h2 Apartment 
+      #total
+      .table-reponsive
+        table.table
+          thead
+            tr
+              th#titleU Unit Name
+              th#titleT Tenant List
+              th#titleRent Total Rooms
+              th#titleRoom Rent per Room
+              th#titleI Total Income From Apartment
+              th#titleA Availability
+              th#titleImg Look At It
+          
+          tbody#aptTable
+            each apartment in arr
+              tr(data.id= apartment._id)
+                td= apartment.imageUrl
+                td= apartment.totalRooms
+                td= apartment.rent
+                td= apartment.tenants
+block scripts  
+  script(src='/js/apartments.js')

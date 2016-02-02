@@ -1,5 +1,5 @@
 {
-  "name": "Apartment Manager",
+  "name": "apartment-manager",
   "version": "1.0.0",
   "description": "Track occupants, vacancies and monthly rent as a property manager",
   "engines": {

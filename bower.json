@@ -1,14 +1,13 @@
 {
-  "name": "projectTemplate",
-  "authors": [
-    "Alicia Poindexter <alcampbel@gmail.com>",
-    "Tiffine Koch <tiffine.koch@gmail.com>"
-  ],
-  "description": "",
+  "name": "apartment-manager",
+  "description": "Track occupants, vacancies and monthly rent as a property manager",
   "main": "",
+  "authors": [
+    "Alicia Poindexter <alcampbel@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ampoindexter/apartment-manager",
   "moduleType": [],
-  "license": "MIT",
-  "homepage": "",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -18,7 +17,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.2.0",
-    "bootstrap": "~3.3.6",
+    "jquery": "^2.2.0",
+    "bootswatch-dist": "3.3.0-slate"
   }
 }
