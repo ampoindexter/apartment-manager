@@ -1,13 +1,14 @@
 {
   "name": "property-manager",
-  "homepage": "https://github.com/ampoindexter/apartment-manager",
-  "authors": [
-    "Alicia Poindexter <alcampbel@gmail.com>"
-  ],
-  "description": "",
+  "description": "Track occupants, vacancies and monthly rent as a property manager",
   "main": "",
+  "authors": [
+    "Alicia Poindexter <alcampbel@gmail.com>",
+    "Tiffine Koch <tiffine.koch@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/ampoindexter/apartment-manager",
   "moduleType": [],
-  "license": "MIT",
   "ignore": [
     "**/.*",
     "node_modules",
