@@ -14,9 +14,7 @@ router.get('/', function(req, res) {
     res.render('apartments', {title: 'Property Manager', arr: apartment || [] });
   });
 });
-;
 
-//same route different query strings - as many or as few
 router.post('/', function(req, res) {
   Apartment.create(req.body, function(err, apartment) {
     console.log(req.body);
