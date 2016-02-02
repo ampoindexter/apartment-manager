@@ -13,7 +13,7 @@ var app = express();
 
 var mongoose = require('mongoose');
 
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/apartment-manager')
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/property-manager')
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
